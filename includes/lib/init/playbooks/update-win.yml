@@ -1,0 +1,11 @@
+---
+- name: Install all Windows updates
+  hosts: "{{host}}"
+  gather_facts: yes
+
+  tasks:
+    - name: Install all available updates
+      win_updates:
+        category_names:
+          - Updates
+        reboot: yes

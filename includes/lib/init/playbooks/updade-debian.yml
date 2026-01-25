@@ -1,0 +1,8 @@
+---
+- name: Install all Debian updates
+  hosts: debian
+  tasks:
+    - name: Install all available updates
+      apt:
+        update_cache: yes
+        upgrade: full

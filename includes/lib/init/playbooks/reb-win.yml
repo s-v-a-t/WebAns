@@ -1,0 +1,10 @@
+---
+- name: Reboot Windows System
+  hosts: "{{host}}"
+  gather_facts: no
+  tasks:
+    - name: Reboot the computer
+      win_command: shutdown /r /f /t 0
+      become: yes
+      become_method: runas
+      become_user: root@ar.se

@@ -1,0 +1,8 @@
+---
+- name: Install all Alpine updates
+  hosts: alpine
+  tasks:
+    - name: Install all available updates
+      apk:
+        update_cache: yes
+        upgrade: yes

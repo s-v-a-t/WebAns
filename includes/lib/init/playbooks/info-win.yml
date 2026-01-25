@@ -1,0 +1,7 @@
+---
+- name: Get system information on Windows
+  hosts: "{{host}}"
+  tasks:
+    - name: Check Windows version
+      win_command: systeminfo
+      register: result

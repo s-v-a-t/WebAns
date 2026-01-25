@@ -1,0 +1,7 @@
+---
+- name: Install all macOS updates
+  hosts: macbooks
+  become: yes
+  tasks:
+    - name: Install all available updates
+      command: softwareupdate -ia

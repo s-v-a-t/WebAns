@@ -1,0 +1,8 @@
+---
+- name: Get system information on Unix
+  hosts: "{{host}}"
+  gather_facts: no
+  tasks:
+    - name: Check Unix version
+      command: uname -a
+      register: result

@@ -1,0 +1,11 @@
+---
+- name: Reboot Unix System
+  hosts: "{{ host }}"
+  gather_facts: no
+  tasks:
+    - name: Reboot the computer
+      ansible.builtin.command:
+        cmd: /sbin/reboot
+      become: yes
+      async: 1
+      poll: 0
